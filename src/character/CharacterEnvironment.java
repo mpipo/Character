@@ -16,7 +16,9 @@ import java.awt.event.MouseEvent;
  */
 class CharacterEnvironment extends Environment {
 
+    private AwesomeFace fred;
     public CharacterEnvironment() {
+        fred = new AwesomeFace(100, 100);
     }
 
     @Override
@@ -45,6 +47,9 @@ class CharacterEnvironment extends Environment {
 
     @Override
     public void paintEnvironment(Graphics graphics) {
+        if (fred != null) {
+            fred.draw(graphics);
+        }
     }
     
 }
