@@ -24,5 +24,6 @@ public class AwesomeFace {
     public void draw(Graphics graphics) {
         graphics.drawRect(x, y, 200, 200);
         // start drawing here
+        // face
     }
 }

@@ -16,9 +16,9 @@ import java.awt.event.MouseEvent;
  */
 class CharacterEnvironment extends Environment {
 
-    private AwesomeFace fred;
+    private final Goomba fred;
     public CharacterEnvironment() {
-        fred = new AwesomeFace(100, 100);
+        fred = new Goomba(100, 100, 400, 400);
     }
 
     @Override
