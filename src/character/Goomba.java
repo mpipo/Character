@@ -7,6 +7,7 @@ package character;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 /**
  *
@@ -56,12 +57,12 @@ public class Goomba {
 //        yValues[5] = 100;
         
         int[] xValues = new int[6];
-        xValues[0] = 100;
-        xValues[1] = 100;
-        xValues[2] = 150;
-        xValues[3] = 200;
-        xValues[4] = 200;
-        xValues[5] = 150;
+        xValues[0] = width;
+        xValues[1] = width;
+        xValues[2] = ((width * 3 / 2));
+        xValues[3] = ((width * 2));
+        xValues[4] = ((width * 2));
+        xValues[5] = ((width * 3 / 2));
 
         int[] yValues = new int[6];
         yValues[0] = 100;
@@ -72,8 +73,14 @@ public class Goomba {
         yValues[5] = 65;
         
         
-        graphics.setColor(Color.red);
-        graphics.fillPolygon(xValues, yValues, xValues.length);
+//        graphics.setColor(Color.);
+        graphics.setColor(new Color(138, 71, 29));
+        
+        Graphics2D g2d = (Graphics2D)graphics;
+        g2d.rotate(50);
+        g2d.fillPolygon(xValues, yValues, xValues.length);
+        
+        
         
 //        graphics.fillPolygon();
 //        System.out.println((x + (width * 8/7)));
