@@ -28,62 +28,35 @@ public class Goomba {
     private final int height;
     
     public void draw(Graphics graphics) {
-//        graphics.drawRect(x, y, 200, 200);
-        // start drawing here
-        // face
-//        graphics.fillRect(200, 200, 100, 100);
-        graphics.setColor(new Color(138, 71, 29));
-//        graphics.fillOval(x, y, 400, 400);
-//        graphics.fillOval(x, y, 250, 250);
-        graphics.fillOval((x + (width * 56 / 100)), (y + (height * 6 / 100)), 100, 100);
-        graphics.fillOval((x + (width * 35 / 100)), (y + (height * 50 /100)), 100, 100);
-        graphics.fillOval((x + (width * 87 / 100)), (y + (height * 56 /100)), 100, 100);
-        
-        
-//        int[] xValues = new int[6];
-//        xValues[0] = 100;
-//        xValues[1] = 100;
-//        xValues[2] = 150;
-//        xValues[3] = 200;
-//        xValues[4] = 200;
-//        xValues[5] = 150;
-//
-//        int[] yValues = new int[6];
-//        yValues[0] = 100;
-//        yValues[1] = 150;
-//        yValues[2] = 200;
-//        yValues[3] = 200;
-//        yValues[4] = 150;
-//        yValues[5] = 100;
+
+        // El Polygon
         
         int[] xValues = new int[6];
-        xValues[0] = width;
-        xValues[1] = width;
-        xValues[2] = ((width * 3 / 2));
-        xValues[3] = ((width * 2));
-        xValues[4] = ((width * 2));
-        xValues[5] = ((width * 3 / 2));
+        xValues[0] = ((width*17/100)*7/10);
+        xValues[1] = ((width*45/100)*7/10);
+        xValues[2] = ((width*79/100)*7/10);
+        xValues[3] = ((width*87/100)*7/10);
+        xValues[4] = ((width*60/100)*7/10);
+        xValues[5] = ((width*26/100)*7/10);
 
         int[] yValues = new int[6];
-        yValues[0] = 100;
-        yValues[1] = 150;
-        yValues[2] = 185;
-        yValues[3] = 150;
-        yValues[4] = 100;
-        yValues[5] = 65;
+        yValues[0] = ((height*44/100)*7/10);
+        yValues[1] = ((height*19/100)*7/10);
+        yValues[2] = ((height*29/100)*7/10);
+        yValues[3] = ((height*64/100)*7/10);
+        yValues[4] = ((height*88/100)*7/10);
+        yValues[5] = ((height*79/100)*7/10);
         
+        graphics.setColor(new Color(140, 83, 34));
+//        graphics.translate(300, 200);
+        graphics.fillPolygon(xValues, yValues, 6);
         
-//        graphics.setColor(Color.);
-        graphics.setColor(new Color(138, 71, 29));
+        // Circle lower left
         
-        Graphics2D g2d = (Graphics2D)graphics;
-        g2d.rotate(50);
-        g2d.fillPolygon(xValues, yValues, xValues.length);
+//        graphics.setColor(new Color(255, 255, 255));
+        graphics.fillOval((x - (width * 44 / 200)), (y + (height * 5 / 100)), (width * 27 / 100), (height * 27 / 100));
         
-        
-        
-//        graphics.fillPolygon();
-//        System.out.println((x + (width * 8/7)));
-        
+        // Circle lower right
+//        graphics.fillOval((x - (width * 13 / 200)), (y + (height * 3 / 100)), (width * 27 / 100), (height * 27 / 100));
     }
 }
