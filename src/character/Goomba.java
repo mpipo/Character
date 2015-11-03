@@ -32,20 +32,20 @@ public class Goomba {
         // El Polygon
         
         int[] xValues = new int[6];
-        xValues[0] = ((width*17/100)*7/10);
-        xValues[1] = ((width*45/100)*7/10);
-        xValues[2] = ((width*79/100)*7/10);
-        xValues[3] = ((width*87/100)*7/10);
-        xValues[4] = ((width*60/100)*7/10);
-        xValues[5] = ((width*26/100)*7/10);
+        xValues[0] = ((width*28/100)*7/10);
+        xValues[1] = ((width*75/100)*7/10);
+        xValues[2] = ((width*97/100)*7/10);
+        xValues[3] = ((width*75/100)*7/10);
+        xValues[4] = ((width*28/100)*7/10);
+        xValues[5] = ((width*5/100)*7/10);
 
         int[] yValues = new int[6];
-        yValues[0] = ((height*44/100)*7/10);
-        yValues[1] = ((height*19/100)*7/10);
-        yValues[2] = ((height*29/100)*7/10);
-        yValues[3] = ((height*64/100)*7/10);
-        yValues[4] = ((height*88/100)*7/10);
-        yValues[5] = ((height*79/100)*7/10);
+        yValues[0] = ((height*10/100)*7/10);
+        yValues[1] = ((height*10/100)*7/10);
+        yValues[2] = ((height*50/100)*7/10);
+        yValues[3] = ((height*90/100)*7/10);
+        yValues[4] = ((height*90/100)*7/10);
+        yValues[5] = ((height*50/100)*7/10);
         
         graphics.setColor(new Color(140, 83, 34));
 //        graphics.translate(300, 200);
@@ -54,9 +54,27 @@ public class Goomba {
         // Circle lower left
         
 //        graphics.setColor(new Color(255, 255, 255));
-        graphics.fillOval((x - (width * 44 / 200)), (y + (height * 5 / 100)), (width * 27 / 100), (height * 27 / 100));
+        graphics.fillOval((x - (width * 56 / 200)), (y + (height * 14 / 200)), (width * 32 / 100), (height * 32 / 100));
         
         // Circle lower right
-//        graphics.fillOval((x - (width * 13 / 200)), (y + (height * 3 / 100)), (width * 27 / 100), (height * 27 / 100));
+        graphics.fillOval((x + (width * 34 / 200)), (y + (height * 14 / 200)), (width * 32 / 100), (height * 32 / 100));
+        
+        // Circle upper
+        
+        graphics.fillOval((x - (width * 21 / 200)), (y - (height * 25 / 100)), (width * 43 / 100), (height * 43 / 100));
+        
+        // left eye
+        graphics.setColor(new Color(255, 255, 255));
+        graphics.fillOval((x + (width * 2 / 200)), (y - (height * 5 / 100)), (width * 7 / 100), (height * 15 / 100));
+        // left eyeball
+        graphics.setColor(new Color(0, 0, 0));
+        graphics.fillOval((x + (width * 5 / 200)), (y - (height * 10 / 200)), (width * 4 / 100), (height * 4 / 100));
+//        right eye
+        graphics.setColor(new Color(255, 255, 255));
+        graphics.fillOval((x + (width * 35 / 200)), (y - (height * 5 / 100)), (width * 7 / 100), (height * 15 / 100));
+        graphics.setColor(new Color(0, 0, 0));
+        graphics.fillOval((x + (width * 38 / 200)), (y - (height * 10 / 200)), (width * 4 / 100), (height * 4 / 100));
+        
+//        graphics.
     }
 }
